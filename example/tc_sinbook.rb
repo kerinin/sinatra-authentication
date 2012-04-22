@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'haml'
+require 'slim'
 require 'sinbook'
 require 'rufus/tokyo'
 require 'sinatra'
@@ -19,7 +19,7 @@ end
 set :port, 4568
 
 get '/' do
-  haml :main
+  slim :main
 end
 
 get '/test' do

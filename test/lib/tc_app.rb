@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'haml'
+require 'slim'
 require 'rufus/tokyo'
 require 'rack-flash'
 require File.join(File.dirname(__FILE__), '../../lib/sinatra-authentication')
@@ -14,5 +14,5 @@ set :public, 'public'
 set :views,  'views'
 
 get '/' do
-  haml "= render_login_logout", :layout => :layout
+  slim "= render_login_logout", :layout => :layout
 end

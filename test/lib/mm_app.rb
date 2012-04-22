@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'haml'
+require 'slim'
 require 'rack-flash'
 require 'mongo_mapper'
 
@@ -21,5 +21,5 @@ set :public, 'public'
 set :views,  'views'
 
 get '/' do
-  haml "= render_login_logout", :layout => :layout
+  slim "= render_login_logout", :layout => :layout
 end

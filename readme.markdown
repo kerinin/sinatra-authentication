@@ -58,7 +58,7 @@ Flash messages are implemented using rack-flash. To set them up add this to your
 
 And then sinatra-authentication related flash messages will be made available through flash[:notice]
 
-    -# somewhere in a haml view:
+    -# somewhere in a slim view:
     = flash[:notice]
 
 ## HELPER METHODS:
@@ -86,7 +86,7 @@ i.e.
     - if current_user.admin?
       %a{:href => "/adminey_link_route_thing"} do something adminey
 
-(these view examples are in HAML, by the way)
+(these view examples are in slim, by the way)
 
 You can also extend the user class with any convenience methods for determining permissions.
 i.e.
@@ -177,11 +177,11 @@ To override the default view path do something like this:
 
 And then the views you'll need to define are:
 
-* show.haml
-* index.haml
-* signup.haml
-* login.haml
-* edit.haml
+* show.slim
+* index.slim
+* signup.slim
+* login.slim
+* edit.slim
 
 The signup and edit form fields are named so they pass a hash called 'user' to the server:
 

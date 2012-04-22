@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'haml'
+require 'slim'
 require 'dm-core'
 require 'dm-migrations'
 require 'rack-flash'
@@ -24,5 +24,5 @@ set :views,  'views'
 
 get '/' do
   puts User.all(:name => 'max')
-  haml "= render_login_logout", :layout => :layout
+  slim "= render_login_logout", :layout => :layout
 end

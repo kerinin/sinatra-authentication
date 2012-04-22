@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra/base'
-require 'haml'
+require 'slim'
 require 'mongo_mapper'
 require 'sinatra-authentication'
 
@@ -17,6 +17,6 @@ class TestApp < Sinatra::Base
   set :views,  'views'
 
   get '/' do
-    haml "= render_login_logout", :layout => :layout
+    slim "= render_login_logout", :layout => :layout
   end
 end

@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'haml'
+require 'slim'
 require 'dm-core'
 require 'dm-migrations'
 require 'rack-flash'
@@ -22,5 +22,5 @@ set :public, 'public'
 set :views,  'views'
 
 get '/' do
-  haml "= render_login_logout", :layout => :layout
+  slim "= render_login_logout", :layout => :layout
 end
